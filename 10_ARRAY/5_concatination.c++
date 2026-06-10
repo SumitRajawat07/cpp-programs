@@ -1,0 +1,39 @@
+#include<iostream>
+
+int getlength(char arr[])
+{
+    int count = 0;
+    int index  = 0;
+
+    while(arr[index] != '\0');
+    {
+        count++;
+        index++;
+    }
+    return count;
+}
+
+void concatarray(char a[], char b[])
+{
+    int aindex = getlength(a);
+    int bindex = 0;
+
+    while (b [bindex] != '\0')
+    {
+        a[aindex] = b[bindex];
+        aindex++;
+        bindex++;
+    }
+    a[aindex] = '\0';
+    
+}
+int main()
+{
+    char a[40] = "sumit";
+    char b[50] = "rajawat";
+    concatarray(a,b);
+
+    std::cout<<"printing a : "<<a<<std::endl;
+
+    return 0;
+}
